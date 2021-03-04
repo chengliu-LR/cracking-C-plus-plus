@@ -666,8 +666,6 @@ For a vector `v`, `v.insert()` and `v.remove()` operations are slower the more e
 
 What operations are slow/fast for a linked list to perform? (Ans: **element access**)
 
----
-
 ### 4.3 `Stack`
 
 Stack is a collection based on the principle of adding elements and retrieving them in the opposite order. (LIFO)
