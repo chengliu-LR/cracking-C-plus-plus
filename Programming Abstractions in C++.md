@@ -529,6 +529,8 @@ Most standard collections operate with iterators instead of indices, iterator is
    int value = *itr2; // OK! reading from iter
    ```
 
+---
+
 ### 3.3 STL Algorithms
 
 #### **Why use STL algorithms**?
@@ -594,8 +596,7 @@ pair<int, int> findPriceRange(int dist) {
 int main() {
    int dist = 6452;
    auto [min, max] = findPriceRange(dist);
-   cout << "You can find prices between: " 
-         << min << " and " << max << endl;
+   cout << "You can find prices between: " << min << " and " << max << endl;
 }
 ```
 
