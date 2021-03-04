@@ -14,11 +14,11 @@
     - [2.1 `Strings`](#21-strings)
     - [2.2 `const`](#22-const)
       - [**The keyword const**](#the-keyword-const)
-      - [**A const pointer** - (Read right to left)](#a-const-pointer---read-right-to-left)
+      - [**A const pointer** - (Read right to left)](#a-const-pointer read-right-to-left)
       - [**Challenge Mode**](#challenge-mode)
   - [Chapter 3. Standard C++ Programming](#chapter-3-standard-c-programming)
     - [3.1 Templates](#31-templates)
-      - [**Generic Thinking** - Lift the concept](#generic-thinking---lift-the-concept)
+      - [**Generic Thinking** - Lift the concept](#generic-thinking lift-the-concept)
       - [**Implicit interface**](#implicit-interface)
       - [**Predicate**: takes *a number of* arguments and returns a `boolean`](#predicate-takes-a-number-of-arguments-and-returns-a-boolean)
     - [3.2 Standard C++ Iterators](#32-standard-c-iterators)
@@ -91,7 +91,7 @@
     - [18.1 Selection sort](#181-selection-sort)
     - [18.2 Insertion sort](#182-insertion-sort)
     - [18.3 Merge sort](#183-merge-sort)
-  - [**RAII** (Resource Acquisition Is Initialization) - Scope based memory management](#raii-resource-acquisition-is-initialization---scope-based-memory-management)
+  - [**RAII** (Resource Acquisition Is Initialization) - Scope based memory management](#raii-resource-acquisition-is-initialization scope-based-memory-management)
     - [Smart Pointers](#smart-pointers)
   - [Multi-threading](#multi-threading)
 
@@ -110,7 +110,7 @@ int main(){
 
 `std` is the name of the top-level `namespace` where all symbols defined in the C++ standard library are placed.
 
----
+ 
 
 ### 1.2 `C++` Basics
 
@@ -122,7 +122,7 @@ int main(){
 + You can declare something as often as you like as long as you do so *consistently*. But you can NOT define something twice.
 + A `const` variable requires an initializer when they are declared. It is almost always a good idea to initialize variables, an uninitialized variable is a recipe for obscure bugs.
 
----
+ 
 
 #### **namespace**
 
@@ -142,7 +142,7 @@ int main() {
 
 Surprisingly, this will not work although we are `using namespace std` because the compiler will take `count` as an local integer.
 
----
+ 
 
 ### 1.3 Functions
 
@@ -156,7 +156,7 @@ Surprisingly, this will not work although we are `using namespace std` because t
 > 3. Is not unnecessarily connected to other functions;
 > 4. The **main** function should be a concise summary of the overall program.
 
----
+ 
 
 ## Chapter 2. Data Types in C++
 
@@ -231,7 +231,7 @@ const int* const myClassMethod(const int* const &param) const;
 2. it returns a const pointer pointing to a const int
 3. it is also a const member function, i.e. this function can NOT modify any variables of the `this` instance
 
----
+ 
 
 ## Chapter 3. Standard C++ Programming
 
@@ -254,7 +254,7 @@ int a = 3, b = 9;
 int c = min<int>(a, b); // this is an explicit initialization, you can also just use int c = min(a, b); 
 ```
 
----
+ 
 
 **Class Templates**: The idea with class templates is the same as function templates.
 
@@ -279,7 +279,7 @@ void ArrayStack<T>::push(T n) {
 template <class T, class Container = std::vector<T>>
 ```
 
----
+ 
 
 #### **Generic Thinking** - Lift the concept
 
@@ -313,7 +313,7 @@ int countOccurences(InputIterator begin, InputIterator end, DataType val) {
 } 
 ```
 
----
+ 
 
 #### **Implicit interface**
 
@@ -329,7 +329,7 @@ Each template parameter must have the operations the function assumes it has!
 
 + `DataType` **must support** comparable to `*iter`
 
----
+ 
 
 #### **Predicate**: takes *a number of* arguments and returns a `boolean`
 
@@ -423,7 +423,7 @@ auto likedByCheng = [&teas, banned](auto type) {
 
 ```
 
----
+ 
 
 ### 3.2 Standard C++ Iterators
 
@@ -466,7 +466,7 @@ cout << endl;
 
 Most standard collections operate with iterators instead of indices, iterator is a standard interface for looping through things in a very powerful way.
 
----
+ 
 
 #### **Iterator usages**
 
@@ -509,7 +509,7 @@ Most standard collections operate with iterators instead of indices, iterator is
    + **Random Access**: same as bidirectional iterators except can be incremented/decremented by `arbitray` amounts/numbers using `+` and `-`.
      + use cases: std::vector, std::deque, std:: string and pointers!
 
----
+ 
 
 #### **`Const` Iterators**
 
@@ -529,7 +529,7 @@ Most standard collections operate with iterators instead of indices, iterator is
    int value = *itr2; // OK! reading from iter
    ```
 
----
+ 
 
 ### 3.3 STL Algorithms
 
@@ -562,7 +562,7 @@ Most standard collections operate with iterators instead of indices, iterator is
 
 + for `sets` and `maps`, the find() member function is faster than the std find function.
 
----
+ 
 
 ### 3.4 Neat features
 
@@ -600,7 +600,7 @@ int main() {
 }
 ```
 
----
+ 
 
 ### 3.5 Wrapping up the STL
 
@@ -608,7 +608,7 @@ A `string` iterator is pointer pointing to string's `char`s.
 
 Before recreating by yourself, looking up to see what tools are already out there.
 
----
+ 
 
 ## Chapter 4. Using Abstract Data Types (STL Collections)
 
@@ -622,7 +622,7 @@ We don't always know exactly how a given collection is implemented internally, a
 + We just need to understand the idea of the collection and what operations it can perform.
 + Each implementation usually has its pros and cons.
 
----
+ 
 
 ### 4.1 `Vector`
 
@@ -658,7 +658,7 @@ std::vector<President> reElections;
 reElections.push_back(President("Franklin", "the USA", 1936));
 ```
 
----
+ 
 
 ### 4.2 `LinkedList`
 
@@ -688,7 +688,7 @@ Why do we need stack? - Stack appear a lot in computer science.
 + you cannot access a stack's elements by index.
 + to implement `stack`, you just limit the functionality of a vector/deque to only allow `push_back()` and `pop_back()`.
 
----
+ 
 
 ### 4.4 `Queues`
 
@@ -716,7 +716,7 @@ Why do we need queues? why not just vectors? - no shifting, faster
 >
 > `std::stack` and `std::queue` classes are known as ***container adaptors***, the class template acts as a wrapper to the underlying container - **only a specific set of functions is provided.**
 
----
+ 
 
 ### 4.5 `Sets` and `Maps`
 
@@ -777,7 +777,7 @@ std::make_pair("Phone number", 65523232);
 
 > when you try to use `*` to dereference a map iterator, you need to use parentheses `()` around `*iter`, which will be like `(*iter).first`.
 
----
+ 
 
 ## Chapter 5. Introduction to Recursion
 
@@ -794,7 +794,7 @@ Recursive thinking: In recursive function calling, it is not that your function 
 
 Be lazy! The base case doesn't do anything! The towers of hanoi puzzle can be solved with recursion magically, the code will be excured from bottom all the way back to the top.
 
----
+ 
 
 ## Chapter 6. Recursion Procedures
 
@@ -812,7 +812,7 @@ If the required function doesn't accept the parameters you need:
 
 + Extra params can represent current state, choices made, etc.
 
----
+ 
 
 ## Chapter 7. Backtracking Algorithms
 
@@ -829,7 +829,7 @@ Explore(decisions):
 
 Sometimes a set of successor function calls will be included in the recursive function. And when the set of choices available is large, using a loop to enumerate them avoids redundancy.
 
----
+ 
 
 ### 7.2 Backtracking
 
@@ -864,11 +864,11 @@ Recursive Backtracking:
 
 + "Arm's" length recursion: a **poor** style where unnecessary tests are performed before performing recursive calls. (Typically, the tests try to avoid making a call into what would otherwise be a base case).
 
----
+ 
 
 ## Chapter 8. Algorithm Analysis
 
----
+ 
 
 ## Chapter 9. Classes and Objects
 
@@ -1010,7 +1010,7 @@ Why are we using `ClassName::` in front of all of our class member functions? - 
    }
    ```
 
----
+ 
 
 #### **Move Semantics** (C++17 feature)
 
@@ -1084,7 +1084,7 @@ StringVector& operator=(StringVector&& other) noexcept;
 
 the fact that you defined one of these means one of your members has *ownership* issues that need to be resolved.
 
----
+ 
 
 ### 9.2 Inheritance
 
@@ -1157,7 +1157,7 @@ Lawyer::Lawyer(string name, int years, string lawSchool)
 
 If a class has at least one pure virtual function, it is called an *abstract class*. Abstract classes cannot be instantiated.
 
----
+ 
 
 **Polymorphism (多态)**: Ability for the same code to be used with different types of objects and behave differently with each.
 
@@ -1243,7 +1243,7 @@ int a = int (b);
 int a = static_cast<int>(b);
 ```
 
----
+ 
 
 ### 9.3 Operator Overloading
 
@@ -1315,7 +1315,7 @@ vector<string>& vector<string>::operator+=(const int& element) {
    + if binary operator and not both equally (e.g. changes lhs), implement as member (allows easy access to lhs private members). *EX)* `+=`
 5. Principles of Least Astonishment (PoLA): design operators primarily to mimic conventional usage.
 
----
+ 
 
 ## Chapter 11. Linear Structures
 
@@ -1421,11 +1421,11 @@ We want a `queue` with these operations:
 
  adding and removing to/from a `heap` all have a $O(logN)$ time complexity, because you are jumping $2$ or $1/2$ each time.
 
----
+ 
 
 ## Chapter 12. Implementing Maps
 
----
+ 
 
 ## Chapter 13. Trees
 
@@ -1450,7 +1450,7 @@ It's heavily used in AI like decision trees.
 + **height**: length of the *longest* path from the root to any node
 + level or **depth**: length of the path from a root to a given node
 
----
+ 
 
 ### 13.1 Binary trees
 
@@ -1490,7 +1490,7 @@ void add(TreeNode* node, int value) {
 }
 ```
 
----
+ 
 
 ### 13.2 Binary search trees (BSTs)
 
@@ -1530,7 +1530,7 @@ Tree Maps (or Map Tree?):
 
 **Balanced trees**: One where for every node R, the height of R's subtrees differ by at most 1, and R's subtrees are also balanced.
 
----
+ 
 
 ### 13.3 Advanced trees
 
@@ -1538,13 +1538,13 @@ Tree Maps (or Map Tree?):
 
 #### **Tries (Prefix trees)**
 
----
+ 
 
 ## Chapter 14. Expresion Trees
 
 ## Chapter 15. Sets
 
----
+ 
 
 ## Chapter 16. Graphs
 
@@ -1604,7 +1604,7 @@ directed graph is one where edges are *one-way* connections between vertices.
 + if graph is directed, a vertex has a separate in/out degree.
 + a digraph can be weighted or unweighted.
 
----
+ 
 
 ### 16.2 DFS and BFS
 
@@ -1675,7 +1675,7 @@ DFS/BFS do **NOT** consider edge weights.
 + sometimes weight is more important:
   + example: plane flight costs, network transmission (lantency between servers)
 
----
+ 
 
 ### 16.3 Dijkstra's algorithm
 
@@ -1722,7 +1722,7 @@ It is correct because it maintains the following two properties:
   + Total runtime: $O(VlogV+ElogV) = O(ElogV)$, because $V=O(E)$ if graph is connected
     + if a list/vector is used instead of a *pq*: $O(V^2+E) = O(V^2)$
 
----
+ 
 
 ### 16.4 A\* algorithm
 
@@ -1760,7 +1760,7 @@ A\* is a modified version of  Dijkstra's algorithm that uses a heuristic functio
     + choose to explore paths with lower estimated cost
     + basically, just add $H(...)$ to costs of elements in PQ to improve PQ processing order
 
----
+ 
 
 ### 16.5 Spanning tree
 
@@ -1803,7 +1803,7 @@ function kruskal(graph):
      + also need an efficient way to figure out which cluster a given vertex is in.
      + also need to merge clusters when adding an edge.
 
----
+ 
 
 ### 16.6 Implementing a graph
 
@@ -1848,7 +1848,7 @@ Three common graph implementation strategies:
   + slow to add/remove a vertex ($O(V^2)$)
   + somewhat slow to get all neighbors of a given vertex (loop over a lot zeros if the graph is sparse)
 
----
+ 
 
 ## Chapter 17. Hashing
 
@@ -1930,7 +1930,7 @@ bool HashIntSet::contains(int value) const {
 }
 ```
 
----
+ 
 
 ### 17.2 Rehashing
 
@@ -1959,7 +1959,7 @@ void HashIntSet::rehash() {
 }
 ```
 
----
+ 
 
 ### 17.3 Hash map
 
@@ -1998,7 +1998,7 @@ int hashCode(string s) {
 }
 ```
 
----
+ 
 
 ### 17.4 Hashing structs/objects
 
@@ -2015,7 +2015,7 @@ The `add`, `contains` and `remove` method of a hash table is all $O(1)$! Isn't t
 
 Cuckoo hashing is really fast for `contains` (check two buckets at **MAX**), but the `add` will get a little slower.
 
----
+ 
 
 ## 18. Sorting
 
@@ -2030,7 +2030,7 @@ How long should we expect bogo sort to take?
 + worst case perfomance: $O(inf)$
 + Best case performance: $O(n)$
 
----
+ 
 
 ### 18.1 Selection sort
 
@@ -2053,7 +2053,7 @@ void selectionSort(vector<int>& v) {
 }
 ```
 
----
+ 
 
 ### 18.2 Insertion sort
 
@@ -2077,7 +2077,7 @@ void insertionSort(vector<int>& v) {
 }
 ```
 
----
+ 
 
 ### 18.3 Merge sort
 
@@ -2094,12 +2094,12 @@ Often implemented recursively, it's an example of a **divide and conquer** algor
 
 Merge sort is very conducive to being split up and parallelized by multiple computers.
 
----
+ 
 
 ## **RAII** (Resource Acquisition Is Initialization) - Scope based memory management
 
 | Resources   | Acquisition | Release  |
-| ----------- | ----------- | -------- |
+|    -- |    -- |   -- |
 | heap memory | `new`       | `delete` |
 | files       | `try_lock`  | `unlock` |
 | locks       | `open`      | `close`  |
@@ -2114,7 +2114,7 @@ All resources should be `released` in the `desctructor`.
 
 The rationale of this is there should never be a *half-valid* state of the object. object useable after its creation; the destructor is always called (even with exceptions), so the resource is always freed.
 
----
+ 
 
 ### Smart Pointers
 
@@ -2168,7 +2168,7 @@ In modern `C++`, we pretty much never use `new` and `delete`!
 
 `std::weak_ptr` is similar to `shared_ptr`, but doesn't contribute to the reference count. it is used to deal with circular references of `shared_ptr`.
 
----
+ 
 
 ## Multi-threading
 
