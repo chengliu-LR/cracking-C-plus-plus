@@ -1,3 +1,9 @@
+# Programming Abstractions in C++
+
+---
+
+## Contents
+
 - [Programming Abstractions in C++](#programming-abstractions-in-c)
 
   - [Chapter 1. An overview of C++](#chapter-1-an-overview-of-c)
@@ -91,7 +97,7 @@
     - [Smart Pointers](#smart-pointers)
   - [Multi-threading](#multi-threading)
 
-# Programming Abstractions in C++
+---
 
 ## Chapter 1. An overview of C++
 
