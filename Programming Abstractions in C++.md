@@ -1,7 +1,5 @@
 # Programming Abstractions in C++
 
----
-
 ## Contents
 
 - [Programming Abstractions in C++](#programming-abstractions-in-c)
@@ -96,8 +94,6 @@
   - [**RAII** (Resource Acquisition Is Initialization) - Scope based memory management](#raii-resource-acquisition-is-initialization---scope-based-memory-management)
     - [Smart Pointers](#smart-pointers)
   - [Multi-threading](#multi-threading)
-
----
 
 ## Chapter 1. An overview of C++
 
