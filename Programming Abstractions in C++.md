@@ -89,7 +89,9 @@
     - [18.3 Merge sort](#183-merge-sort)
   - [**RAII** (Resource Acquisition Is Initialization) - Scope based memory management](#raii-resource-acquisition-is-initialization---scope-based-memory-management)
     - [Smart Pointers](#smart-pointers)
-  - [Multi-threading](#multi-threading)# Programming Abstractions in C++
+  - [Multi-threading](#multi-threading)
+
+# Programming Abstractions in C++
 
 ## Chapter 1. An overview of C++
 
