@@ -145,7 +145,7 @@ Surprisingly, this will not work although we are `using namespace std` because t
 ### 1.3 Functions
 
 + ***Value semantics***: In Java and C++, when variables are passed as parameters, their values are **copied**.
-+ ***Reference semantics***: If you declare a parameter with an & after its **type**, it will link the function to the same place in memory i.e. modifying a parameter *will* affect the variable passed in. Instead of `return`, this is a different way of sending information out of a function.
++ ***Reference semantics***: If you declare a parameter with an `&` after its **type**, it will link the function to the same place in memory i.e. modifying a parameter *will* affect the variable passed in. Instead of `return`, this is a different way of sending information out of a function.
 
 > **Properties of a good function:**
 >
