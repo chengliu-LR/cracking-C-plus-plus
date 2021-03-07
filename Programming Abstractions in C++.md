@@ -264,7 +264,7 @@ template <typename T>
 class ArrayStack {
 public:
    void push(T n);
-}
+};
 
 // instead of putting below code in a separate cpp file, this have to be under the same `.h` file at the same time!
 template <typename T>
@@ -307,7 +307,7 @@ int countOccurences(InputIterator begin, InputIterator end, DataType val) {
    for (auto iter = begin; iter != end; ++iter) {
       if(*iter == val) ++count;
    }
-   return count
+   return count;
 } 
 ```
 
