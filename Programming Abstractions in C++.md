@@ -307,7 +307,7 @@ int countOccurences(InputIterator begin, InputIterator end, DataType val) {
    for (auto iter = begin; iter != end; ++iter) {
       if(*iter == val) ++count;
    }
-   return count
+   return count;
 } 
 ```
 
