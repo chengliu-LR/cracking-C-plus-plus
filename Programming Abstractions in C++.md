@@ -201,7 +201,8 @@ void foo(const BankAccount& ba) {
 + a const member function can't change the object's state:
 
 ```c++
-class BankAccount { ...
+class BankAccount {
+   ...
    double getBalance() const;
 }
 ```
@@ -249,7 +250,8 @@ T min(T a, T b) {
 
 int a = 3, b = 9;       
 // we can indicate the type by angle brackets after the function name
-int c = min<int>(a, b); // this is an explicit initialization, you can also just use int c = min(a, b); 
+int c = min<int>(a, b); // explicit initialization
+int c = min(a, b); // implicit initialization
 ```
 
 ---
@@ -264,15 +266,13 @@ public:
    void push(T n);
 }
 
-// have to be under the same `.h` file at the same time!
+// instead of putting below code in a separate cpp file, this have to be under the same `.h` file at the same time!
 template <typename T>
 void ArrayStack<T>::push(T n) {
    elements[size] = n;
    size++;
 }
-```
 
-```cpp
 // this is also possible, there is no semantic difference between class and typename in a template-parameter.
 template <class T, class Container = std::vector<T>>
 ```
