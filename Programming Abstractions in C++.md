@@ -264,7 +264,7 @@ template <typename T>
 class ArrayStack {
 public:
    void push(T n);
-}
+};
 
 // instead of putting below code in a separate cpp file, this have to be under the same `.h` file at the same time!
 template <typename T>
