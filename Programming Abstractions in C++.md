@@ -1091,7 +1091,7 @@ Why are we using `ClassName::` in front of all of our class member functions? - 
       ```cpp
       vector<int> operator+(const vetor<int>& vec, int elem) {
          vector<int> copy = vec; // the equal operator here will call the default copy constructor and copies everything (int size, int *elems)
-         copy += element;
+         copy += elem;
          return copy;
          // when it's out of scope, it will free the heap memory multiple times (3 times due to 3 calls to destructor)
       }
