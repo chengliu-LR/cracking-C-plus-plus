@@ -1,7 +1,7 @@
 # Programming Abstractions in `C++`
 
-- [Programming Abstractions in C++](#programming-abstractions-in-c)
-  - [Chapter 1. An overview of C++](#chapter-1-an-overview-of-c)
+- [Programming Abstractions in `C++`](#programming-abstractions-in-c)
+  - [Chapter 1. An overview of `C++`](#chapter-1-an-overview-of-c)
     - [1.1 What is `C++`?](#11-what-is-c)
     - [1.2 `C++` Basics](#12-c-basics)
       - [**Declarations and definitions**](#declarations-and-definitions)
