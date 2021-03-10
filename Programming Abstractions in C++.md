@@ -1,7 +1,7 @@
 # Programming Abstractions in `C++`
 
 - [Programming Abstractions in `C++`](#programming-abstractions-in-c)
-  - [Chapter 1. An overview of `C++`](#chapter-1-an-overview-of-c)
+  - [Chapter 1. An overview of C++](#chapter-1-an-overview-of-c)
     - [1.1 What is `C++`?](#11-what-is-c)
     - [1.2 `C++` Basics](#12-c-basics)
       - [**Declarations and definitions**](#declarations-and-definitions)
@@ -56,7 +56,7 @@
     - [9.4 The keyword `const`](#94-the-keyword-const)
       - [**A const pointer** - (Read right to left)](#a-const-pointer---read-right-to-left)
       - [**Challenge Mode**](#challenge-mode)
-  - [Chapter 10. Standard `C++` Programming](#chapter-10-standard-c-programming)
+  - [Chapter 10. Standard C++ Programming](#chapter-10-standard-c-programming)
     - [10.0 `STL` Collections](#100-stl-collections)
       - [**10.0.1 `Vector`**](#1001-vector)
       - [**10.0.2 `LinkedList`**](#1002-linkedlist)
@@ -68,7 +68,7 @@
       - [**Generic Thinking** - Lift the concept](#generic-thinking---lift-the-concept)
       - [**Implicit interface**](#implicit-interface)
       - [**Predicate**: takes *a number of* arguments and returns a `boolean`](#predicate-takes-a-number-of-arguments-and-returns-a-boolean)
-    - [10.2 Standard `C++` Iterators](#102-standard-c-iterators)
+    - [10.2 Standard C++ Iterators](#102-standard-c-iterators)
       - [**Iterator usages**](#iterator-usages)
       - [**`Const` Iterators**](#const-iterators)
       - [**`Map` iterators**](#map-iterators)
@@ -1243,6 +1243,16 @@ Comparing it with templates, the templates is `static` polymorphism because it w
 
 One class can extend another, absorbing its data/behavior.
 
+The inheritance relationship of two classes is declared in the derived class. Derived classes definitions use the following syntax:
+
+```cpp
+class Derived_class_name: public Base_class_name {
+   /*...*/
+};
+```
+
+Most use cases of inheritance in C++ should use `public` inheritance. When other access levels are needed for base classes, they can usually be better represented as member variables instead.
+
 + *superclass* (base class): parent class that is being extended.
 + *subclass* (derived class): child class that inherits from the superclass.
   + subclass gets a copy of every field and method from superclass.
@@ -1257,7 +1267,7 @@ Always use `virtual` when the method is going to be overided. if you intend to m
 
 **Liskov Substitution Principle**: Should be able to replace a class with its subclass and have the same expected behavior.
 
-To call a superclass constructor from subclass constructor, use an *initialization list*, with a colon `:` after the constructor declaration.
+Unless otherwise specified, the constructors of a derived class calls the default constructor of its base classes (i.e., the constructor taking no arguments). Calling a different constructor of a base class is possible, using the same syntax used to initialize member variables in the *initialization list*, with a colon `:` after the constructor declaration:
 
 ```cpp
 Lawyer::Lawyer(string name, int years, string lawSchool)
