@@ -1,4 +1,4 @@
-# Programming Abstractions in C++
+# Programming Abstractions in `C++`
 
 - [Programming Abstractions in C++](#programming-abstractions-in-c)
   - [Chapter 1. An overview of C++](#chapter-1-an-overview-of-c)
