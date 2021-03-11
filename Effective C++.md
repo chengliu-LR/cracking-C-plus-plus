@@ -1,5 +1,7 @@
 # Effective `C++`
 
+***55** specific ways to improve your programs and designs*
+
 - [Effective `C++`](#effective-c)
   - [Chapter 1: Accustoming yourself to `C++`](#chapter-1-accustoming-yourself-to-c)
     - [Item1 - View C++ as a federation of languages](#item1---view-c-as-a-federation-of-languages)
@@ -13,7 +15,6 @@
   - [Chapter 7: Templates and generic programming](#chapter-7-templates-and-generic-programming)
   - [Chapter 8: Customizing `new` and `delete`](#chapter-8-customizing-new-and-delete)
 
-***55** specific ways to improve your programs and designs*
 
 ## Chapter 1: Accustoming yourself to `C++`
 
