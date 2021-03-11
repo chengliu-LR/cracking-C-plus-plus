@@ -1,5 +1,18 @@
 # Effective `C++`
 
+- [Effective `C++`](#effective-c)
+  - [Chapter 1: Accustoming yourself to `C++`](#chapter-1-accustoming-yourself-to-c)
+    - [Item1 - View C++ as a federation of languages](#item1---view-c-as-a-federation-of-languages)
+    - [Item2 - Prefer `const`s, `enum`s and `inline`s to `#define`s](#item2---prefer-consts-enums-and-inlines-to-defines)
+    - [Item3 - Use `const` whenever possible](#item3---use-const-whenever-possible)
+  - [Chapter 2: Constructors, destructors and assignment operators](#chapter-2-constructors-destructors-and-assignment-operators)
+  - [Chapter 3: Resource management](#chapter-3-resource-management)
+  - [Chapter 4: Designs and declarations](#chapter-4-designs-and-declarations)
+  - [Chapter 5: Implementations](#chapter-5-implementations)
+  - [Chapter 6: Inheritance and OOP design](#chapter-6-inheritance-and-oop-design)
+  - [Chapter 7: Templates and generic programming](#chapter-7-templates-and-generic-programming)
+  - [Chapter 8: Customizing `new` and `delete`](#chapter-8-customizing-new-and-delete)
+
 ***55** specific ways to improve your programs and designs*
 
 ## Chapter 1: Accustoming yourself to `C++`
