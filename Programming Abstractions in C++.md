@@ -1067,7 +1067,7 @@ Why are we using `ClassName::` in front of all of our class member functions? - 
       cout << p.countPopulation() << endl;
       // Not OK: deathStar isn't const
       p.deathStar();
-   } 
+   }
    ```
 
    + the compiler assumes non-const member functions may modify the class.
@@ -1947,8 +1947,8 @@ Most standard collections operate with iterators instead of indices, iterator is
 #### **`Const` Iterators**
 
 + remember that iterators act like pointers
-+ `const vector<int>::iterator itr` however acts like `int* const itr`, in which the iterator itself can not be modified
-+ to make an iterator read only, define a new `const_iterator`
++ `const vector<int>::iterator itr` however acts like `int* const itr`, in which the iterator itself can not be modified, but the thing it points to may be modified
++ to make an iterator read only, define a new `const_iterator`, it points to something that can't be modified
 
    ```cpp
    vector<int> vec{1,2,3,4};
