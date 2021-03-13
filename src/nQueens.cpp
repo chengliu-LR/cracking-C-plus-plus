@@ -41,7 +41,7 @@ vector<vector<string> > solveNQueens(int n) {
 
 int main() {
     vector<vector<string> > ans;
-    cout << "please insert the dim of the board" << endl;
+    cout << "please insert the dim of the board:" << endl;
     int num;
     cin >> num;
     ans = solveNQueens(num);
