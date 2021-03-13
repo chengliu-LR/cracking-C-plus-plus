@@ -15,7 +15,6 @@
   - [Chapter 7: Templates and generic programming](#chapter-7-templates-and-generic-programming)
   - [Chapter 8: Customizing `new` and `delete`](#chapter-8-customizing-new-and-delete)
 
-
 ## Chapter 1: Accustoming yourself to `C++`
 
 ### Item1 - View C++ as a federation of languages
