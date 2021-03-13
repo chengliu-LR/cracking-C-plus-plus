@@ -8,10 +8,10 @@ bool isValid(int row, int col, vector<string>& board, int n) {
     for(int j = 0; j < col; j++) {
         if(board[row][j] != '.') return false;
     }
-    for(int i = row-1, j = col-1; i>=0 && j >= 0; i--, j--){
+    for(int i = row-1, j = col-1; i>=0 && j >= 0; i--, j--) {
         if(board[i][j] == 'Q') return false;
     }
-    for(int i = row+1, j = col-1; i<n && j>=0; i++, j--){
+    for(int i = row+1, j = col-1; i<n && j>=0; i++, j--) {
         if(board[i][j] == 'Q') return false;
     }
     return true;
@@ -41,12 +41,15 @@ vector<vector<string> > solveNQueens(int n) {
 
 int main() {
     vector<vector<string> > ans;
-    ans = solveNQueens(5);
+    cout << "please insert the dim of the board" << endl;
+    int num;
+    cin >> num;
+    ans = solveNQueens(num);
     for(int i = 0; i < ans.size(); i++) {
         for(int j = 0; j < ans[i].size(); j++) {
             cout << ans[i][j] << endl;
         }
         cout << endl;
     }
-    cout << ans.size() << endl;
+    cout << "there are " << ans.size() << " solutions" << endl;
 }
