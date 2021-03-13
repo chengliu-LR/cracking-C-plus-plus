@@ -15,7 +15,6 @@
   - [Chapter 7: Templates and generic programming](#chapter-7-templates-and-generic-programming)
   - [Chapter 8: Customizing `new` and `delete`](#chapter-8-customizing-new-and-delete)
 
-
 ## Chapter 1: Accustoming yourself to `C++`
 
 ### Item1 - View C++ as a federation of languages
@@ -34,7 +33,9 @@ Rules of effective C++ programming vary, depending on the part of C++ you are us
 
 ### Item3 - Use `const` whenever possible
 
-
+- Declaring something `const` helps compilers detect usage errors. `const` can be applied to objects at any scope, to function parameters and return types, and to member functions as a whole.
+- Compilers enforce *bitwise constness*, but you should program using *logical constness*. (Watchout the pointers that my be escape the bitwise constness)
+- When `const` and non-`const` member functions have essentially identical implementations, code duplication can be avoided by having the non-`const` version call the `const` version (the reverve way is dangerous).
 
 ## Chapter 2: Constructors, destructors and assignment operators
 
