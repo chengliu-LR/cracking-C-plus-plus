@@ -51,10 +51,5 @@ int main() {
         }
         cout << endl;
     }
-<<<<<<< HEAD
-    cout << "there are " << ans.size() << " solutions!" << endl;
-}
-=======
     cout << "there are " << ans.size() << " solutions." << endl;
 }
->>>>>>> 429a4512879df4777c6c8c71baa1849854a8266f
