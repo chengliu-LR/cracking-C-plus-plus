@@ -51,5 +51,5 @@ int main() {
         }
         cout << endl;
     }
-    cout << "there are " << ans.size() << " solutions" << endl;
+    cout << "there are " << ans.size() << " solutions!" << endl;
 }
