@@ -7,6 +7,7 @@
     - [Item1 - View C++ as a federation of languages](#item1---view-c-as-a-federation-of-languages)
     - [Item2 - Prefer `const`s, `enum`s and `inline`s to `#define`s](#item2---prefer-consts-enums-and-inlines-to-defines)
     - [Item3 - Use `const` whenever possible](#item3---use-const-whenever-possible)
+    - [Item4 - Make sure that objects are initialized before they're used](#item4---make-sure-that-objects-are-initialized-before-theyre-used)
   - [Chapter 2: Constructors, destructors and assignment operators](#chapter-2-constructors-destructors-and-assignment-operators)
   - [Chapter 3: Resource management](#chapter-3-resource-management)
   - [Chapter 4: Designs and declarations](#chapter-4-designs-and-declarations)
@@ -24,7 +25,7 @@
 - Template C++
 - The STL
 
-Rules of effective C++ programming vary, depending on the part of C++ you are using.
+Rules of effective C++ programming vary, depcending on the part of C++ you are using.
 
 ### Item2 - Prefer `const`s, `enum`s and `inline`s to `#define`s
 
@@ -36,6 +37,22 @@ Rules of effective C++ programming vary, depending on the part of C++ you are us
 - Declaring something `const` helps compilers detect usage errors. `const` can be applied to objects at any scope, to function parameters and return types, and to member functions as a whole.
 - Compilers enforce *bitwise constness*, but you should program using *logical constness*. (Watchout the pointers that my be escape the bitwise constness)
 - When `const` and non-`const` member functions have essentially identical implementations, code duplication can be avoided by having the non-`const` version call the `const` version (the reverve way is dangerous).
+
+### Item4 - Make sure that objects are initialized before they're used
+
+For most types, a single call to a copy constructor is more efficient, sometimes `much` more efficient than a call to the default constructor followed by a call to the copy assignment operator. This is why initialization list is prefered than the assignment-based constructor (in the assignment-based version, default constructors are called to initialize the nested-classes, and then promptly assign new values on top of the default-constructed ones).
+
+For objects of built-in types, there is no difference in cost between initialization and assignment, but for consistency, it's often best to initialize everything via member initialization.
+
+Sometimes th initialization list *must* be used, even for built-in types. For example, data members that are `const` or are references must be initialized; they can't be assigned.
+
+- Manually initialize objects of built-in type, because C++ only sometimes initializes them itself.
+- In a cosntructor, prefer use of the member initialization list to assignment inside the body of the constructor. List data members in the initialization list in the same order they're declared in the class.
+- Avoid initialization order problems accross *translation units* by replacing non-local static objects with local static objects (C++ guarantees that local static objects are initialized when the object's definition is first encountered during a call to that function).
+
+**What is non-local static object?**
+
+
 
 ## Chapter 2: Constructors, destructors and assignment operators
 
@@ -50,3 +67,4 @@ Rules of effective C++ programming vary, depending on the part of C++ you are us
 ## Chapter 7: Templates and generic programming
 
 ## Chapter 8: Customizing `new` and `delete`
+ 
