@@ -25,7 +25,7 @@
 - Template C++
 - The STL
 
-Rules of effective C++ programming vary, depcending on the part of C++ you are using.
+Rules of effective C++ programming vary, depending on the part of C++ you are using.
 
 ### Item2 - Prefer `const`s, `enum`s and `inline`s to `#define`s
 
