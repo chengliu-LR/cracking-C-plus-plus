@@ -44,15 +44,13 @@ For most types, a single call to a copy constructor is more efficient, sometimes
 
 For objects of built-in types, there is no difference in cost between initialization and assignment, but for consistency, it's often best to initialize everything via member initialization.
 
-Sometimes th initialization list *must* be used, even for built-in types. For example, data members that are `const` or are references must be initialized; they can't be assigned.
+Sometimes the initialization list *must* be used, even for built-in types. For example, data members that are `const` or are references must be initialized; they can't be assigned.
 
 - Manually initialize objects of built-in type, because C++ only sometimes initializes them itself.
 - In a cosntructor, prefer use of the member initialization list to assignment inside the body of the constructor. List data members in the initialization list in the same order they're declared in the class.
 - Avoid initialization order problems accross *translation units* by replacing non-local static objects with local static objects (C++ guarantees that local static objects are initialized when the object's definition is first encountered during a call to that function).
 
 **What is non-local static object?**
-
-
 
 ## Chapter 2: Constructors, destructors and assignment operators
 
@@ -67,4 +65,3 @@ Sometimes th initialization list *must* be used, even for built-in types. For ex
 ## Chapter 7: Templates and generic programming
 
 ## Chapter 8: Customizing `new` and `delete`
- 
