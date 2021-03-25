@@ -9,6 +9,7 @@
     - [Item3 - Use `const` whenever possible](#item3---use-const-whenever-possible)
     - [Item4 - Make sure that objects are initialized before they're used](#item4---make-sure-that-objects-are-initialized-before-theyre-used)
   - [Chapter 2: Constructors, destructors and assignment operators](#chapter-2-constructors-destructors-and-assignment-operators)
+    - [Item5 - Know what functions C++ silently writes and calls](#item5---know-what-functions-c-silently-writes-and-calls)
   - [Chapter 3: Resource management](#chapter-3-resource-management)
   - [Chapter 4: Designs and declarations](#chapter-4-designs-and-declarations)
   - [Chapter 5: Implementations](#chapter-5-implementations)
@@ -53,6 +54,33 @@ Sometimes the initialization list *must* be used, even for built-in types. For e
 **What is non-local static object?**
 
 ## Chapter 2: Constructors, destructors and assignment operators
+
+### Item5 - Know what functions C++ silently writes and calls
+
+Consider what should happen here:
+
+```cpp
+template<typename T>
+class NamedObject {
+public:
+  NamedObject(std::string& name, const T& value);
+
+private:
+  std::string& nameValue;
+  const T objectValue;
+}
+
+std::string newDog("Liu Le");
+std::string oldDog("Le Liu");
+
+NamedObject<int> p(newDog, 2);
+NamedObject<int> s(oldDog, 18);
+
+p = s; // call copy assignment operator
+
+```
+
+C++ compiler refuses to compile the code above. C++ does not provide a way to make a reference refer to a different object. If you want to support copy assignment in a class containing a reference memeber, you must define the copy assignment operator yourself. Compilers behave similarly for classes containing `const` members. It is not legal to modify `const` members, so compulers are unsure how to treat them during an implicitly generated assignment function.
 
 ## Chapter 3: Resource management
 
