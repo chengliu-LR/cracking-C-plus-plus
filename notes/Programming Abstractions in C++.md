@@ -393,7 +393,7 @@ Because the address stored in the pointer `*node` is changed, but this change is
 
 ```cpp
 void swapInt(int *a,int *b) {
-   int temp; temp=*a; a=*b; *b=temp; //指针的指向地址并没有变，但是改变了所指地址中存储的变量值
+   int temp; temp=*a; *a=*b; *b=temp; //指针的指向地址并没有变，但是改变了所指地址中存储的变量值
 }
 ```
 
