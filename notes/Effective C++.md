@@ -66,9 +66,9 @@ public:
   NamedObject(std::string& name, const T& value);
 
 private:
-  std::string& nameValue;
-  const T objectValue;
-}
+  std::string& nameValue; // reference
+  const T objectValue;  // const
+};
 
 std::string newDog("Liu Le");
 std::string oldDog("Le Liu");
